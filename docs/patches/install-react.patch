@@ -10,7 +10,7 @@ index 912299d..4b3faff 100644
        "@babel/preset-env",
        { "targets": "> 0.25%, not dead" }
 diff --git a/.eslintrc b/.eslintrc
-index 30ccd14..6159b70 100644
+index 8c64c17..599326e 100644
 --- a/.eslintrc
 +++ b/.eslintrc
 @@ -2,11 +2,17 @@
@@ -33,14 +33,13 @@ index 30ccd14..6159b70 100644
    },
    "env": {
      "browser": true,
-@@ -18,7 +24,17 @@
-     "template-curly-spacing": [2, "always"],
-     "object-curly-newline": [2, { "multiline": true, "consistent": true }],
-     "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
--    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}]
-+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}],
+@@ -35,7 +41,17 @@
+       { "blankLine": "always", "prev": "if", "next": "*" },
+       { "blankLine": "always", "prev": "*", "next": "if" }
+     ],
 +    "react/jsx-curly-spacing": [2, { "when": "always", "children": true }],
-+    "react/jsx-boolean-value": [0]
++    "react/jsx-boolean-value": [0],
+     "template-curly-spacing": [2, "always"]
    },
 -  "ignorePatterns": ["node_modules/**/*", "dist/**/*"]
 +  "ignorePatterns": ["node_modules/**/*", "dist/**/*"],
@@ -138,10 +137,10 @@ index 261a40d..c9117cb 100644
 +  document.getElementById('root'),
 +);
 diff --git a/webpack.config.js b/webpack.config.js
-index a1bc222..edc733e 100644
+index d8ec4a1..90b4a37 100644
 --- a/webpack.config.js
 +++ b/webpack.config.js
-@@ -22,7 +22,7 @@ module.exports = (_env, argv) => {
+@@ -24,7 +24,7 @@ module.exports = (_env, argv) => {
      module: {
        rules: [
          {
@@ -150,7 +149,7 @@ index a1bc222..edc733e 100644
            exclude: /node_modules/,
            use: [ 'babel-loader' ],
          },
-@@ -41,7 +41,7 @@ module.exports = (_env, argv) => {
+@@ -43,7 +43,7 @@ module.exports = (_env, argv) => {
        ],
      },
      resolve: {
