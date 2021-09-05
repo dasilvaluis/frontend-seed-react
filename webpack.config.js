@@ -2,16 +2,20 @@ const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (_env, argv) => {
-  const isDevelopment = argv.mode === 'development';
+require('dotenv').config();
 
-  const devPlugins = [
+const pluginsByEnv = {
+  development: [
     new BrowserSyncPlugin({
       host: 'localhost',
-      port: 3000,
+      port: process.env.PORT || 3000,
       server: { baseDir: [ 'dist' ] },
     }),
-  ];
+  ],
+};
+
+module.exports = (_env, argv) => {
+  const envSpecificPlugins = pluginsByEnv[argv.mode] || [];
 
   return {
     entry: path.resolve(__dirname, './src/index.js'),
@@ -44,7 +48,7 @@ module.exports = (_env, argv) => {
       filename: 'main.js?v=[hash]',
     },
     plugins: [
-      ...((isDevelopment && devPlugins) || []),
+      ...envSpecificPlugins,
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
       }),
