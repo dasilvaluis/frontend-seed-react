@@ -110,3 +110,17 @@ If not using Typescript, install `prop-types`:
     "extends": "stylelint-config-standard"
   }
 ```
+
+---
+
+## This is too much!
+
+Sorry about that.\
+You can apply the pre-generated patch under `patches/install-react.patch`
+
+You should then update any packages that are outdated.
+
+```sh
+  git apply patches/install-react.patch
+  yarn upgrade
+```
