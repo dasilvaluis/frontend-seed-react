@@ -121,6 +121,6 @@ You can apply the pre-generated patch under `patches/install-react.patch`
 You should then update any packages that are outdated.
 
 ```sh
-  git apply patches/install-react.patch
+  git apply docs/patches/install-react.patch
   yarn upgrade
 ```
