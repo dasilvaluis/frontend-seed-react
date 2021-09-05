@@ -13,12 +13,29 @@
     "jest": true
   },
   "rules": {
-    "import/prefer-default-export": [0],
+    "array-bracket-newline": ["error", "consistent"],
     "array-bracket-spacing": [2, "always"],
-    "template-curly-spacing": [2, "always"],
+    "array-element-newline": ["error", "consistent"],
+    "function-paren-newline": ["error", "multiline-arguments"],
+    "import/prefer-default-export": [0],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}],
+    "no-magic-numbers": ["error", { "ignoreDefaultValues": true, "ignoreArrayIndexes": true }],
     "object-curly-newline": [2, { "multiline": true, "consistent": true }],
     "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}]
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": "*", "next": "function" },
+      { "blankLine": "always", "prev": "function", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "expression" },
+      { "blankLine": "always", "prev": "expression", "next": "*" },
+      { "blankLine": "any", "prev": "expression", "next": "expression" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
+      { "blankLine": "always", "prev": "if", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "if" }
+    ],
+    "template-curly-spacing": [2, "always"]
   },
   "ignorePatterns": ["node_modules/**/*", "dist/**/*"]
 }

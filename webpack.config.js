@@ -4,11 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 require('dotenv').config();
 
+const DEFAULT_PORT = 3000;
+
 const pluginsByEnv = {
   development: [
     new BrowserSyncPlugin({
       host: 'localhost',
-      port: process.env.PORT || 3000,
+      port: process.env.PORT || DEFAULT_PORT,
       server: { baseDir: [ 'dist' ] },
     }),
   ],
