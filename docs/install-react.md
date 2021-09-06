@@ -111,16 +111,23 @@ If not using Typescript, install `prop-types`:
   }
 ```
 
----
+## 6 - Load React into the DOM
 
-## This is too much!
+Your `src/index.js` file should look something like.\
+*assume App as the entry point for you React tree*
 
-Sorry about that.\
-You can apply the pre-generated patch under `patches/install-react.patch`
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
-You should then update any packages that are outdated.
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
 
-```sh
-  git apply docs/patches/install-react.patch
-  yarn upgrade
 ```
+
+You may now create React components using `.jsx` files
