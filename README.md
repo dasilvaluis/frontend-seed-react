@@ -26,7 +26,7 @@ Create a `.env` under the root folder file with the variable `PORT` set to which
 ### Build
 - Bundle everything with [webpack](https://www.npmjs.com/package/webpack)
 - Set environment specific variables with [dotenv](https://www.npmjs.com/package/dotenv)
-- Let the browser reload with [browser-sync](https://www.npmjs.com/package/browser-sync)
+- Let the browser reload with [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
 
 ### Testing
 - Test your code with [jest](https://www.npmjs.com/package/jest) with the help of [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)

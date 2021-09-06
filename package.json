@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "webpack --watch --mode development",
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
@@ -21,8 +21,6 @@
     "@testing-library/jest-dom": "^5.14.1",
     "babel-jest": "^27.1.0",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.27.5",
-    "browser-sync-webpack-plugin": "^2.3.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
