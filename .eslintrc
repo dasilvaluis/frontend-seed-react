@@ -2,16 +2,33 @@
   "parser": "@babel/eslint-parser",
   "extends": [
     "eslint:recommended",
-    "airbnb-base"
+    "airbnb-base",
+    "plugin:import/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2021,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "env": {
     "browser": true,
     "jest": true
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "ignorePatterns": ["node_modules/**/*", "dist/**/*"],
   "rules": {
     "array-bracket-newline": [2, "consistent"],
     "array-bracket-spacing": [2, "always"],
@@ -35,7 +52,8 @@
       { "blankLine": "always", "prev": "if", "next": "*" },
       { "blankLine": "always", "prev": "*", "next": "if" }
     ],
-    "template-curly-spacing": [2, "always"]
-  },
-  "ignorePatterns": ["node_modules/**/*", "dist/**/*"]
+    "template-curly-spacing": [2, "always"],
+    "react/jsx-curly-spacing": [2, { "when": "always", "children": true }],
+    "react/jsx-boolean-value": [2]
+  }
 }
