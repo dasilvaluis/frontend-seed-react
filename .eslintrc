@@ -40,20 +40,22 @@
     "object-curly-newline": [2, { "multiline": true, "consistent": true }],
     "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
     "padding-line-between-statements": [
-      "error",
+      2,
+      { "blankLine": "always", "prev": "*", "next": "if" },
       { "blankLine": "always", "prev": "*", "next": "return" },
-      { "blankLine": "always", "prev": "*", "next": "function" },
-      { "blankLine": "always", "prev": "function", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "expression" },
-      { "blankLine": "always", "prev": "expression", "next": "*" },
-      { "blankLine": "any", "prev": "expression", "next": "expression" },
-      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
-      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
-      { "blankLine": "always", "prev": "if", "next": "*" },
-      { "blankLine": "always", "prev": "*", "next": "if" }
+      { "blankLine": "always", "prev": "*", "next": "function" }
     ],
     "template-curly-spacing": [2, "always"],
     "react/jsx-curly-spacing": [2, { "when": "always", "children": true }],
     "react/jsx-boolean-value": [2]
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "src/*.js", "src/*.jsx" ],
+      "excludedFiles": ["*.test.js", "*.test.jsx", "*.spec.js", "*.spec.jsx"],
+      "rules": {
+        "no-magic-numbers": [2, { "ignore": [-1, 0, 1, 100] }]
+      }
+    }
+  ]
 }
