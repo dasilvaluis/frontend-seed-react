@@ -6,12 +6,14 @@ An un-bloated, more-or-less-opionated, readied starting point for frontend Javas
 
 ```
 yarn run start      # Start development mode
+         serve      # Serve production build
          build      # Create production build
          test       # Test Javascript
          lint       # Lint everything
          lint:js    # Lint Javascript
          lint:css   # Lint Styles
 ````
+
 ### Options
 
 **Development server port** \
@@ -29,8 +31,12 @@ Create a `.env` under the root folder file with the variable `PORT` set to which
 - Let the browser reload with [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server)
 
 ### Testing
-- Test your code with [jest](https://www.npmjs.com/package/jest) with the help of [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)
+Testing is done through
+- [jest](https://www.npmjs.com/package/jest) 
+- [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)
+- [@testing-library/react](https://www.npmjs.com/package/@testing-library/react)
+- [@testing-library/react-hooks](https://www.npmjs.com/package/@testing-library/react-hooks)
 
 ### Linting
-- Lint you JS code with [eslint](https://www.npmjs.com/package/eslint) with standards from [eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base)
-- Lint you CSS/SCSS with [stylelint](https://www.npmjs.com/package/stylelint) with [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard)
+- JS linting: [eslint](https://www.npmjs.com/package/eslint)
+- CSS linting: [stylelint](https://www.npmjs.com/package/stylelint)

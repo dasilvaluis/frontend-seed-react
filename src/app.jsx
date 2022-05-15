@@ -7,12 +7,14 @@ export function handleClickMe() {
 
 export default function App() {
   return (
-    <div className="app">
-      <h1>Hello Freak!</h1>
-      <p>Welcome to your new app.</p>
-      <div>
-        <button onClick={ handleClickMe }>Click me!</button>
+    <React.StrictMode>
+      <div className="app">
+        <h1>Hello Freak!</h1>
+        <p>Welcome to your new app.</p>
+        <div>
+          <button onClick={ handleClickMe }>Click me!</button>
+        </div>
       </div>
-    </div>
+    </React.StrictMode>
   );
 }
