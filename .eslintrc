@@ -13,13 +13,13 @@
     "jest": true
   },
   "rules": {
-    "array-bracket-newline": ["error", "consistent"],
+    "array-bracket-newline": [2, "consistent"],
     "array-bracket-spacing": [2, "always"],
-    "array-element-newline": ["error", "consistent"],
-    "function-paren-newline": ["error", "multiline-arguments"],
+    "array-element-newline": [2, "consistent"],
+    "function-paren-newline": [2, "multiline-arguments"],
     "import/prefer-default-export": [0],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}],
-    "no-magic-numbers": ["error", { "ignoreDefaultValues": true, "ignoreArrayIndexes": true }],
+    "import/no-extraneous-dependencies": [2, {"devDependencies": ["/*.js", "**/*.test.js", "**/*.spec.js"]}],
+    "no-magic-numbers": [2, { "ignoreDefaultValues": true, "ignoreArrayIndexes": true }],
     "object-curly-newline": [2, { "multiline": true, "consistent": true }],
     "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
     "padding-line-between-statements": [
