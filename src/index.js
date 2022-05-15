@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 
-export function renderApp() {
-  const container = document.getElementById('app');
-  const root = ReactDOM.createRoot(container);
+const container = document.getElementById('app-root');
+const root = ReactDOM.createRoot(container);
 
+export function renderApp() {
   root.render(<App />);
 }
 
