@@ -2,9 +2,13 @@
   "name": "project-name",
   "version": "0.0.0",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "src/index.js",
+  "engines": {
+    "node": "^14.17.0 || >=16"
+  },
   "scripts": {
     "start": "webpack serve --mode development",
+    "serve": "webpack serve --mode production",
     "build": "webpack --mode production",
     "test": "jest",
     "lint": "npm run lint:js && npm run lint:css",
@@ -17,17 +21,27 @@
     "@babel/core": "7.17.10",
     "@babel/eslint-parser": "7.17.0",
     "@babel/preset-env": "7.17.10",
+    "@babel/preset-react": "7.16.7",
     "@svgr/webpack": "6.2.1",
     "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.2.0",
+    "@testing-library/react-hooks": "8.0.0",
+    "autoprefixer": "10.4.7",
     "babel-jest": "28.1.0",
     "babel-loader": "8.2.5",
+    "browserslist": "4.20.3",
     "css-loader": "6.7.1",
     "eslint": "8.15.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-react-hooks": "4.5.0",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.5.0",
     "jest": "28.1.0",
+    "postcss": "8.4.13",
+    "postcss-loader": "6.2.1",
+    "progress-bar-webpack-plugin": "2.1.0",
     "sass": "1.51.0",
     "sass-loader": "12.6.0",
     "style-loader": "3.3.1",
@@ -38,6 +52,8 @@
     "webpack-dev-server": "4.9.0"
   },
   "dependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "16.0.1",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   }
 }
