@@ -12,7 +12,7 @@ export default function App() {
         <h1>Hello!</h1>
         <p>Welcome to your new app.</p>
         <div>
-          <button onClick={ handleClickMe }>Click me!</button>
+          <button onClick={handleClickMe}>Click me!</button>
         </div>
       </div>
     </React.StrictMode>

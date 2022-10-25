@@ -1,17 +1,17 @@
 # Frontend Seed
 
-An un-bloated, more-or-less-opionated, readied starting point for frontend Javascript applications.
+An un-bloated, more-or-less-opionated, readied starting point for React applications.
 
-## Commands
+## Scripts
 
 ```
-yarn run start      # Start development mode
-         serve      # Serve production build
-         build      # Create production build
-         test       # Test Javascript
-         lint       # Lint everything
-         lint:js    # Lint Javascript
-         lint:css   # Lint Styles
+start      # Start development mode
+serve      # Serve production build
+build      # Create production build
+test       # Test Javascript
+lint       # Lint everything
+lint:js    # Lint Javascript
+lint:css   # Lint Styles
 ````
 
 ### Options
