@@ -48,7 +48,7 @@
     "postcss-loader": "7.0.1",
     "progress-bar-webpack-plugin": "2.1.0",
     "sass": "1.56.0",
-    "sass-loader": "13.1.0",
+    "sass-loader": "13.2.0",
     "style-loader": "3.3.1",
     "stylelint": "14.14.1",
     "stylelint-config-standard": "29.0.0",
