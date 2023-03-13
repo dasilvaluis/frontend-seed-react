@@ -32,7 +32,7 @@
     "@testing-library/react": "14.0.0",
     "@testing-library/react-hooks": "8.0.1",
     "autoprefixer": "10.4.14",
-    "babel-jest": "29.4.1",
+    "babel-jest": "29.5.0",
     "babel-loader": "9.1.2",
     "browserslist": "4.21.5",
     "css-loader": "6.7.3",
